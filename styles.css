@@ -112,7 +112,7 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 .training-intro { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start; }
 .training-intro > p:last-child { grid-column: 2; margin: 20px 0 0; color: var(--muted); }
 .training-main-visual { margin: 72px 0 0; overflow: hidden; background: var(--white); }
-.training-main-visual img { display: block; width: 100%; height: auto; object-fit: contain; transform: scale(1.025) translate3d(0, var(--motion-y, 0), 0); will-change: transform; }
+.training-main-visual img { display: block; width: 100%; height: auto; max-height: 820px; margin: 0 auto; object-fit: contain; transform: scale(1.025) translate3d(0, var(--motion-y, 0), 0); will-change: transform; }
 .training-flow { list-style: none; padding: 0; margin: 100px 0 0; border-top: 1px solid var(--line); }
 .training-flow li { display: grid; grid-template-columns: 80px 1.1fr 2fr; padding: 26px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
 .training-flow span { color: var(--muted); font: 500 11px/1 "DM Sans", sans-serif; }

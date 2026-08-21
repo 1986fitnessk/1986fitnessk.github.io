@@ -76,7 +76,7 @@ const coachDialogContent = document.querySelector('[data-dialog-content]');
 (window.TRAINERS || []).forEach((coach, index) => {
   const card = document.createElement('article');
   card.className = 'coach-card';
-  card.innerHTML = `<img src="${coach.image}" alt="${coach.name}의 실제 코칭 현장" width="1179" height="1133" loading="lazy"><div><p class="eyebrow">1986 COACH</p><h3>${coach.name}</h3><div class="coach-tags">${coach.specialties.map((item) => `<span>${item}</span>`).join('')}</div><button type="button" data-coach-index="${index}">코칭 방식 보기 →</button></div>`;
+  card.innerHTML = `<img src="${coach.image}" alt="${coach.imageAlt}" width="${coach.imageWidth}" height="${coach.imageHeight}" loading="lazy"><div><p class="eyebrow">1986 COACH</p><h3>${coach.name}</h3><div class="coach-tags">${coach.specialties.map((item) => `<span>${item}</span>`).join('')}</div><button type="button" data-coach-index="${index}">코칭 방식 보기 →</button></div>`;
   coachList?.append(card);
 });
 
