@@ -242,7 +242,7 @@ footer > p { margin: 0; font-size: 18px; line-height: 1.6; }
   .section { padding: 82px var(--pad); }
   .section-index { margin-bottom: 48px; }
   .section-heading, .space-stage, .training-intro, .experience-head, .faq-layout { grid-template-columns: 1fr; }
-  .section h2 { font-size: 35px; line-height: 1.32; }
+  .section h2 { font-size: 32px; line-height: 1.36; }
   .why-feature, .why-feature .section-heading { min-height: 520px; }
   .why-feature .section-heading { padding: 36px 24px; }
   .why-visual::after { background: linear-gradient(180deg, rgba(17,17,15,.18), rgba(17,17,15,.42) 62%, rgba(17,17,15,.78)); }
@@ -255,14 +255,14 @@ footer > p { margin: 0; font-size: 18px; line-height: 1.6; }
   .area strong { font-size: 46px; }
   .area-plus { width: 34px; height: 34px; }
   .member-reviews { margin-top: 78px; }
-  .member-reviews-head h3 { font-size: 34px; }
+  .member-reviews-head h3 { font-size: 30px; }
   .member-reviews-head::after { content: "리뷰를 옆으로 넘겨 확인하세요  →"; display: block; margin-top: 18px; color: #aaa9a2; font: 500 10px/1.5 "DM Sans", sans-serif; letter-spacing: .08em; }
   .member-review-grid { display: flex; gap: 10px; margin: 26px calc(var(--pad) * -1) 0; padding: 0 var(--pad) 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--pad); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
   .member-review-grid::-webkit-scrollbar { display: none; }
   .member-review-card { flex: 0 0 80vw; padding: 5px; scroll-snap-align: center; }
   .facility-archive { margin-top: 78px; }
   .facility-archive-head { grid-template-columns: 1fr; gap: 24px; }
-  .facility-archive-head h3 { font-size: 34px; }
+  .facility-archive-head h3 { font-size: 30px; }
   .facility-video { margin-top: 28px; }
   .facility-video figcaption { align-items: flex-start; flex-direction: column; gap: 7px; padding: 13px 14px; }
   .facility-rail { grid-auto-columns: 86vw; gap: 12px; margin-left: calc(var(--pad) * -1); margin-right: calc(var(--pad) * -1); padding-left: var(--pad); padding-right: var(--pad); }
@@ -273,14 +273,14 @@ footer > p { margin: 0; font-size: 18px; line-height: 1.6; }
   .training-flow p { grid-column: 2; margin-top: 10px; font-size: 13px; line-height: 1.7; }
   .assessment-evidence { margin-top: 78px; }
   .assessment-heading { grid-template-columns: 1fr; gap: 24px; }
-  .assessment-heading h3 { font-size: 34px; }
+  .assessment-heading h3 { font-size: 30px; }
   .assessment-gallery { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-left: calc(var(--pad) * -1); margin-right: calc(var(--pad) * -1); border-left: 0; border-right: 0; }
   .assessment-gallery::-webkit-scrollbar { display: none; }
   .assessment-card { flex: 0 0 78vw; scroll-snap-align: center; }
   .assessment-card:first-child { margin-left: var(--pad); }
   .assessment-card:last-child { margin-right: var(--pad); }
   .assessment-feature { grid-template-columns: 1fr; gap: 28px; margin-top: 52px; }
-  .assessment-feature figcaption strong { font-size: 30px; }
+  .assessment-feature figcaption strong { font-size: 27px; }
   .trainer-culture { width: 100%; margin-top: 64px; padding: 26px; }
   .trainer-culture blockquote { margin: 38px 0; }
   .experience-feature, .experience-feature .experience-head { min-height: 500px; }
@@ -290,18 +290,18 @@ footer > p { margin: 0; font-size: 18px; line-height: 1.6; }
   .continuity { grid-template-columns: 1fr; gap: 54px; }
   .continuity-feature { grid-column: auto; min-height: 600px; }
   .continuity-feature .continuity-copy { min-height: 600px; padding: 32px 24px; }
-  .continuity-feature .continuity-copy h2 { font-size: 34px; }
+  .continuity-feature .continuity-copy h2 { font-size: 30px; }
   .continuity-visual { background-position: 58% center; }
   .continuity-track { grid-column: auto; }
   .weekly-letter { grid-column: auto; width: 100%; margin-top: 12px; padding: 24px 20px; }
   .weekly-letter-head { grid-template-columns: 1fr; gap: 24px; }
-  .weekly-letter-head h3 { font-size: 32px; }
+  .weekly-letter-head h3 { font-size: 29px; }
   .weekly-letter-head::after { content: "가이드를 옆으로 넘겨 확인하세요  →"; display: block; margin-top: 4px; color: #aaa9a2; font: 500 10px/1.5 "DM Sans", sans-serif; letter-spacing: .08em; }
   .weekly-letter-gallery { display: flex; width: auto; min-width: 0; gap: 10px; margin-left: -20px; margin-right: -20px; padding: 0 20px 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
   .weekly-letter-gallery::-webkit-scrollbar { display: none; }
   .weekly-letter-gallery figure { flex: 0 0 84vw; scroll-snap-align: center; }
   .member-voice { grid-column: auto; padding: 28px; margin-top: 12px; }
-  .member-voice blockquote { margin: 36px 0; }
+  .member-voice blockquote { margin: 36px 0; font-size: 30px; }
   .visit { grid-template-columns: 1fr; gap: 54px; }
   .visit .section-index { grid-column: auto; }
   .visit-copy, .visit-media { margin: 0; }
