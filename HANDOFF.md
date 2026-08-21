@@ -4,8 +4,8 @@
 
 - 로컬 사이트: http://127.0.0.1:4173/
 - 서버: Python HTTP Server, 포트 `4173`
-- 상태: 로컬 실행 중, 미배포
-- Git: 아직 커밋하지 않았으며 주요 파일은 untracked 상태
+- 상태: GitHub Pages 운영 중 (`https://1986fitnessk.github.io/`)
+- Git: `main` 브랜치를 `origin` / `pages-root` 원격에 반영
 
 서버 재실행 명령:
 
@@ -32,6 +32,11 @@ python3 -m http.server 4173 --bind 127.0.0.1
 - 시설 사진 14장을 공간 섹션에 임시 배치
 - 방문 상담 버튼에 네이버 지도 링크 연결
 - 전화 문의 버튼 제거
+- PT 섹션을 WHY 1986 다음으로 이동하고 `UNDERSTAND / COACH / STUDY` 수업 증거 추가
+- `data/trainers.js`, `data/gallery.js`, `data/site-config.js` 기반 운영 데이터 분리
+- 시설 갤러리를 WEIGHT / CARDIO / PRIVATE CARE / SHOWER로 탐색 가능하게 개편
+- 모바일 하단에 방문 상담 / 전화 문의 2분할 CTA 구조 추가
+- 전화번호는 미확인 상태라 `data/site-config.js` 값이 있을 때만 활성화
 
 ## 다음 작업 후보
 

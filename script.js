@@ -1,6 +1,94 @@
 const header = document.querySelector('[data-header]');
 const progress = document.querySelector('[data-page-progress]');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const config = window.SITE_CONFIG || {};
+
+document.querySelectorAll('[data-consult]').forEach((link) => {
+  if (!config.consultationUrl) return;
+  link.href = config.consultationUrl;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+});
+
+document.querySelectorAll('[data-phone]').forEach((link) => {
+  if (!config.phone) {
+    link.addEventListener('click', (event) => event.preventDefault());
+    return;
+  }
+  link.href = `tel:${config.phone.replace(/[^0-9+]/g, '')}`;
+  link.removeAttribute('aria-disabled');
+});
+
+const main = document.querySelector('main');
+const whySection = document.querySelector('#why');
+const trainingSection = document.querySelector('#training');
+const proofSection = document.querySelector('#training-proof');
+const spaceSection = document.querySelector('#space');
+const coachesSection = document.querySelector('#coaches');
+if (main && whySection && trainingSection && proofSection && spaceSection && coachesSection) {
+  whySection.after(trainingSection);
+  trainingSection.after(proofSection);
+  proofSection.after(spaceSection);
+  spaceSection.after(coachesSection);
+  const reviewsSection = document.querySelector('.member-reviews');
+  if (reviewsSection) {
+    reviewsSection.id = 'reviews';
+    reviewsSection.classList.add('section', 'section-dark');
+    coachesSection.after(reviewsSection);
+  }
+}
+
+if (trainingSection) {
+  const trainingCta = document.createElement('a');
+  trainingCta.className = 'inline-training-cta';
+  trainingCta.dataset.consult = '';
+  trainingCta.dataset.event = 'pt_consultation';
+  trainingCta.href = config.consultationUrl || '#visit';
+  trainingCta.target = config.consultationUrl ? '_blank' : '';
+  trainingCta.rel = config.consultationUrl ? 'noopener noreferrer' : '';
+  trainingCta.textContent = '내 운동 목적에 맞는 수업 상담하기 →';
+  trainingSection.append(trainingCta);
+}
+
+const facilityRail = document.querySelector('.facility-rail');
+if (facilityRail && window.SPACE_GALLERY?.length) {
+  const filters = document.createElement('div');
+  filters.className = 'space-filters';
+  filters.setAttribute('aria-label', '공간 카테고리');
+  filters.innerHTML = [['all','ALL'],['weight','WEIGHT'],['cardio','CARDIO'],['care','PRIVATE CARE'],['shower','SHOWER']].map(([key,label], index) => `<button type="button" class="${index === 0 ? 'is-active' : ''}" data-filter="${key}">${label}</button>`).join('');
+  facilityRail.before(filters);
+  const renderSpaces = (filter = 'all') => {
+    const items = window.SPACE_GALLERY.filter((item) => filter === 'all' || item.category === filter);
+    facilityRail.innerHTML = items.map((item, index) => `<figure class="facility-card"><img src="${item.src}" alt="${item.alt}" loading="lazy" decoding="async"><figcaption>${item.label}<span>${String(index + 1).padStart(2, '0')}</span></figcaption></figure>`).join('');
+  };
+  filters.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-filter]');
+    if (!button) return;
+    filters.querySelectorAll('button').forEach((item) => item.classList.toggle('is-active', item === button));
+    renderSpaces(button.dataset.filter);
+  });
+  renderSpaces();
+}
+
+const coachList = document.querySelector('[data-coach-list]');
+const coachDialog = document.querySelector('[data-coach-dialog]');
+const coachDialogContent = document.querySelector('[data-dialog-content]');
+(window.TRAINERS || []).forEach((coach, index) => {
+  const card = document.createElement('article');
+  card.className = 'coach-card';
+  card.innerHTML = `<img src="${coach.image}" alt="${coach.name}의 실제 코칭 현장" width="1179" height="1133" loading="lazy"><div><p class="eyebrow">1986 COACH</p><h3>${coach.name}</h3><div class="coach-tags">${coach.specialties.map((item) => `<span>${item}</span>`).join('')}</div><button type="button" data-coach-index="${index}">코칭 방식 보기 →</button></div>`;
+  coachList?.append(card);
+});
+
+coachList?.addEventListener('click', (event) => {
+  const button = event.target.closest('[data-coach-index]');
+  if (!button || !coachDialog || !coachDialogContent) return;
+  const coach = window.TRAINERS[Number(button.dataset.coachIndex)];
+  coachDialogContent.innerHTML = `<p class="eyebrow">COACHING PHILOSOPHY</p><h2>${coach.name}</h2><p>${coach.philosophy}</p><h3>수업에서 중요하게 보는 것</h3><ul>${coach.education.map((item) => `<li>${item}</li>`).join('')}</ul>`;
+  coachDialog.showModal();
+});
+document.querySelector('[data-dialog-close]')?.addEventListener('click', () => coachDialog?.close());
+coachDialog?.addEventListener('click', (event) => { if (event.target === coachDialog) coachDialog.close(); });
 
 const syncPageState = () => {
   header?.classList.toggle('is-scrolled', window.scrollY > 24);

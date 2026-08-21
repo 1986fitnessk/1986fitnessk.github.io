@@ -1,0 +1,1 @@
+window.TRAINERS = [{ name: "1986 코칭팀", image: "assets/training/coaching-session.jpeg", specialties: ["체형·움직임 평가", "목적별 운동 코칭"], education: ["현재 상태를 이해하는 평가", "이유와 방법을 설명하는 수업", "스스로 이어갈 수 있는 운동 지도"], certifications: [], philosophy: "운동을 시키는 것보다, 운동을 제대로 가르치는 것." }];
