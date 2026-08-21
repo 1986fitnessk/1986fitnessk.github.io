@@ -291,7 +291,7 @@ footer > p { margin: 0; font-size: 18px; line-height: 1.6; }
   .continuity-feature { grid-column: auto; min-height: 600px; }
   .continuity-feature .continuity-copy { min-height: 600px; padding: 32px 24px; }
   .continuity-feature .continuity-copy h2 { font-size: 30px; }
-  .continuity-visual { background-position: 58% center; }
+  .continuity-visual { background-color: var(--ink); background-position: center, center top; background-size: 100% 100%, 100% auto; }
   .continuity-track { grid-column: auto; }
   .weekly-letter { grid-column: auto; width: 100%; margin-top: 12px; padding: 24px 20px; }
   .weekly-letter-head { grid-template-columns: 1fr; gap: 24px; }
