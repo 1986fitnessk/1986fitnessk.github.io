@@ -354,7 +354,9 @@ footer > p { margin: 0; font-size: 18px; line-height: 1.6; }
 .proof-quote { margin:100px 0 0; padding:58px; color:var(--white); background:var(--ink); font-size:clamp(34px,5vw,68px); line-height:1.28; letter-spacing:-.05em; }
 .coach-list { margin-top:72px; }
 .coach-card { display:grid; grid-template-columns:minmax(280px,.8fr) 1.2fr; gap:6vw; align-items:center; border-top:1px solid var(--dark-line); padding-top:30px; }
-.coach-card img { width:100%; height:auto; object-fit:contain; background:#090909; }
+.coach-media { display:flex; flex-direction:column; align-items:flex-start; padding-bottom:4%; }
+.coach-media img { display:block; width:74%; height:auto; object-fit:contain; background:#090909; }
+.coach-media img+img { width:64%; margin:-20% 0 0 auto; border:8px solid var(--ink); box-shadow:0 20px 50px rgba(0,0,0,.32); }
 .coach-card h3 { margin:0 0 18px; font-size:clamp(30px,4vw,54px); font-weight:500; }
 .coach-tags { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px; }
 .coach-tags span { padding:8px 10px; border:1px solid var(--dark-line); color:#d0cfc8; font-size:12px; }
