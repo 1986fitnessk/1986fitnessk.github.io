@@ -337,9 +337,6 @@ footer > p { margin: 0; font-size: 18px; line-height: 1.6; }
 .hero .hero-eyebrow { margin-top:36px; }
 .hero > h1 { flex-direction:column; }
 .hero .hero-stamp { display:none; }
-.hero-ctas { display:flex; align-items:center; gap:28px; }
-.hero-consult { min-height:48px; padding:0 18px; display:flex; align-items:center; gap:30px; color:#fff; background:var(--accent); border:1px solid var(--accent); font-size:13px; }
-.hero-consult:hover { background:var(--accent-deep); }
 .training { scroll-margin-top:64px; }
 .training::after { content:""; display:block; margin-top:54px; }
 .training .inline-training-cta { margin-top:40px; }
@@ -390,8 +387,6 @@ footer > p { margin: 0; font-size: 18px; line-height: 1.6; }
   .hero .hero-eyebrow { display:block; margin-top:12px; }
   .hero > h1 { display:flex; margin:auto 0 28px; font-size:clamp(36px,10.4vw,48px); }
   .hero-bottom { display:flex; width:100%; gap:22px; }
-  .hero-ctas { width:100%; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
-  .hero-ctas a { min-height:48px; padding:0 12px; justify-content:center; text-align:center; font-size:12px; }
   .proof-heading,.coaches-heading { grid-template-columns:1fr; gap:12px; }
   .proof-cards { display:flex; gap:10px; margin-left:-20px; margin-right:-20px; padding:0 20px 14px; overflow-x:auto; scroll-snap-type:x mandatory; }
   .proof-cards article { flex:0 0 82vw; scroll-snap-align:center; }
