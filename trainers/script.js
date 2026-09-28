@@ -14,7 +14,7 @@ document.querySelectorAll('[data-filter]').forEach(button => {
       card.hidden = selected !== 'all' && !(card.dataset.specialties || '').split(' ').includes(selected);
     });
     document.querySelector('.directory-status').textContent = selected === 'all'
-      ? '강한새 · 한슬기 트레이너 소개를 확인하실 수 있습니다. 다른 선생님들의 소개도 순차적으로 추가됩니다.'
+      ? '강한새 · 한슬기 · 김재현 트레이너 소개를 확인하실 수 있습니다. 다른 선생님들의 소개도 순차적으로 추가됩니다.'
       : button.textContent + ' 분야 · 트레이너 ' + document.querySelectorAll('.coach-card[data-specialties]:not([hidden])').length + '명';
   });
 });
