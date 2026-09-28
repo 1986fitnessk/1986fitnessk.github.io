@@ -1,5 +1,5 @@
-// Center booking page, without the old date selection parameter.
-const bookingUrl = 'https://m.booking.naver.com/booking/12/bizes/603554/items/4925065';
+// Shared Naver TalkTalk consultation link.
+const bookingUrl = 'http://talk.naver.com/W40TZM';
 const gallery = document.querySelector('.qualification-gallery');
 if (gallery) {
   document.querySelector('#credentials').after(gallery);
