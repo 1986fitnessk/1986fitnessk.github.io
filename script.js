@@ -30,7 +30,8 @@ document.querySelectorAll('[data-consult]').forEach((link) => {
 
 const externalLinks = [
   ['[data-map]', config.mapUrl],
-  ['[data-kakao]', config.kakaoUrl]
+  ['[data-kakao]', config.kakaoUrl],
+  ['[data-talk]', config.talkUrl]
 ];
 
 externalLinks.forEach(([selector, url]) => {
